@@ -13,6 +13,6 @@ public class monsterTest {
         System.out.println(Kirk.getyPos() + " this is the ypos");
         System.out.println(Kirk.getdead());
         System.out.println("waht is your attack");
-        //Scanner.class
+        Scanner scanner = new Scanner (System.in);
     }
 }

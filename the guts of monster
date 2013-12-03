@@ -1,0 +1,83 @@
+package monster;
+
+public class Monster {
+
+    public final String tombstone = "his last words were: kkkkkkkkkkhhhhhhhhaaaaaaannnnnn";
+    private int health = 150;
+    private int maxArmor = 30;
+    private int minArmor = 0;
+    private int maxAttack = 10;
+    private int minAttack = 0;
+    private int movment = 2;
+    private int maxxPos = 10;
+    private int minxPos = 0;
+    private int maxyPos = 20;
+    private int minypos = 2;
+    private String battleCry = "phasers to stun";
+    private boolean hostile = true;
+    public boolean dead = false;
+    private int maxName = 4;
+    private int minName = 0;
+    private String name;
+
+    //metheds
+    public int getHealth() {
+        return health;
+    }
+
+    public int getAttack() {
+        return (int) (Math.random() * maxAttack);
+    }
+
+    public int getmovment() {
+        return movment;
+    }
+
+    public int getxPos() {
+        return (int) (Math.random() * maxxPos);
+
+    }
+
+    public int getyPos() {
+        return (int) (Math.random() * maxyPos);
+    }
+
+    public void printBattleCry() {
+        System.out.println(battleCry);
+
+    }
+
+    public void hit(int damage) {
+        health -= damage;
+        dead = health <= 0;
+    }
+
+    public int getArmor() {
+        return (int) (Math.random() * maxArmor);
+    }
+
+    public boolean getdead() {
+        return dead;
+    }
+
+    public String tombstone() {
+        return tombstone;
+    }
+
+    public String randName() {
+        int rand = (int) (Math.random() * maxName);
+        if (rand == 0) {
+            this.name = "bob";
+        } else if (rand == 1) {
+            this.name = "Kirk";
+        } else if (rand == 2) {
+            this.name = "Khan";
+        } else if (rand == 3) {
+            this.name = "Bones";
+        } else if (rand == 4) {
+            this.name = "spock";
+        }
+        return this.name;
+
+    }
+}
